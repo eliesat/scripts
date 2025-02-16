@@ -62,14 +62,10 @@ extract=$?
 rm -rf $package >/dev/null 2>&1
 
 if [ $extract -eq 0 ]; then
-    rm -rf /usr/script >/dev/null 2>&1
     rm -rf /tmp/scripts-main/*.sh >/dev/null 2>&1
-    mkdir -p /usr/script
-    create=$?
-    if [ $create -eq 0 ]; then
+    mkdir -p /usr/script >/dev/null 2>&1
     cp -r '/tmp/scripts-main/usr' '/' >/dev/null 2>&1
     rm -rf /tmp/scripts-main >/dev/null 2>&1
-    fi
 print_message "> scripts are installed successfully and up to date ..."
 echo
 sleep 2
