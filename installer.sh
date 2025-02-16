@@ -6,7 +6,6 @@ clear >/dev/null 2>&1
 ###########################################
 plugin=main
 version='scripts'
-changelog='1.16.02.2025'
 url=https://github.com/eliesat/scripts/archive/main.tar.gz
 package=/tmp/$plugin.tar.gz
 rm -rf /tmp/$plugin.tar.gz >/dev/null 2>&1
@@ -60,4 +59,22 @@ rm -rf /control /postinst /preinst /prerm /postrm /tmp/*.ipk /tmp/*.tar.gz >/dev
 wget -qO $package --no-check-certificate $url
 tar -xzf $package -C /tmp
 extract=$?
-#rm -rf $package >/dev/null 2>&1
+rm -rf $package >/dev/null 2>&1
+
+if [ $extract -eq 0 ]; then
+    rm -rf /usr/script >/dev/null 2>&1
+    rm -rf /tmp/scripts-main/*.sh >/dev/null 2>&1
+    mkdir -p /usr/script
+    create=$?
+    if [ $create -eq 0 ]; then
+    cp -r '/tmp/scripts-main/usr' '/' >/dev/null 2>&1
+    rm -rf /tmp/scripts-main >/dev/null 2>&1
+    fi
+print_message "> scripts are installed successfully and up to date ..."
+echo
+sleep 2
+fi
+print_message "> End of process ..."
+sleep 3
+
+
