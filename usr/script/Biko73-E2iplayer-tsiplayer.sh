@@ -7,7 +7,7 @@ echo $MY_SEP
 echo 'Downloading 'add_Tsplayer.tar.gz' ...'
 echo $MY_SEP
 echo ''
-wget -qO https://raw.githubusercontent.com/biko-73/E2IPlayer/main/add_Tsplayer.tar.gz -P "/tmp/"
+wget https://raw.githubusercontent.com/biko-73/E2IPlayer/main/add_Tsplayer.tar.gz -P "/tmp/"
 
 if [ -f /tmp/add_Tsplayer.tar.gz ]; then
 
