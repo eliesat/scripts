@@ -4,31 +4,25 @@ echo 1 > /proc/sys/vm/drop_caches
 echo 2 > /proc/sys/vm/drop_caches
 echo 3 > /proc/sys/vm/drop_caches
 
-
-
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/arabiapriet5.py
 wait
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/bein.py
 wait 
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/beinConnect.py
 wait
-python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/beincin.py
-wait  
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/beinent.py
 wait
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/beinentC.py
 wait
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/beinsportiet5.py
 wait
+python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/egypt1iet5.py
+wait
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/egypt2iet5.py
-wait  
-python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/elcin.py
 wait
-python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/elcinEN.py
-wait  
-python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/elcinmaiet5.py
+python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/jawwyOS.py
 wait
-python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/nilesatiet5.py
+python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/jawwyenOS.py
 wait
 python /usr/lib/enigma2/python/Plugins/Extensions/EPGGrabber/providers/osnar.py
 wait
